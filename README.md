@@ -1,8 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+---
 
-## Getting Started
+````markdown
+# Next.js Social Media App (Instagram Clone)
 
-First, run the development server:
+A fully-featured social media web app built with **Next.js (App Router)**, **TypeScript**, **Prisma**, **Clerk**, and **Neon**.  
+This project is designed as a portfolio-quality clone of Instagram to demonstrate skills in full-stack development using modern web technologies.
+
+## 🚀 Features
+
+- Authentication & Authorization with Clerk (OAuth & Email/Password)
+- Responsive UI using Tailwind CSS
+- Create, like, and comment on posts
+- Follow/unfollow users
+- Profile pages with user-specific data
+- Optimistic UI updates
+- Server-side rendering (SSR) & static site generation (SSG)
+- API routes with protected access
+- PostgreSQL database hosted on Neon
+- Fully typed with TypeScript
+- Prisma ORM with schema modeling and migrations
+
+## 🛠 Tech Stack
+
+- **Frontend:** Next.js (App Router), TypeScript, Tailwind CSS
+- **Backend:** API Routes (Next.js), Prisma
+- **Authentication:** Clerk
+- **Database:** PostgreSQL on Neon
+- **Deployment:** Vercel
+
+## 📦 Getting Started
+
+First, install dependencies:
+
+```bash
+npm install
+# or
+yarn
+# or
+pnpm install
+````
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +48,64 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create a `.env` file based on `.env.example` and add your keys for:
 
-## Learn More
+```env
+DATABASE_URL=your_neon_database_url
+CLERK_SECRET_KEY=your_clerk_secret
+CLERK_PUBLISHABLE_KEY=your_clerk_publishable
+NEXT_PUBLIC_CLERK_FRONTEND_API=...
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Push Prisma schema:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx prisma db push
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📸 Screenshots
 
-## Deploy on Vercel
+*Add screenshots or a short demo video here if available.*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📍 Folder Structure Highlights
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* `app/`: All pages and layouts using Next.js App Router
+* `lib/`: Utility functions and helpers
+* `prisma/`: Prisma schema and migrations
+* `components/`: Reusable UI components
+* `hooks/`: Custom React hooks
+
+## ✅ To Do
+
+* [ ] Image upload via Cloudinary or similar
+* [ ] Notifications system
+* [ ] Reels or Stories feature
+* [ ] Messaging system
+
+## 📚 Learn More
+
+* [Next.js Documentation](https://nextjs.org/docs)
+* [Prisma Documentation](https://www.prisma.io/docs)
+* [Clerk Documentation](https://clerk.dev/docs)
+* [Neon Database](https://neon.tech/)
+
+## 📤 Deployment
+
+The app is deployed on **Vercel** for optimal performance and seamless integration with Next.js.
+
+---
+
+Made with ❤️ for learning, building, and showing off full-stack skills!
+
+```
+
+---
+
+
+```
